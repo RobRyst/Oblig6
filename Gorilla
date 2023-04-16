@@ -1,0 +1,19 @@
+package org.example;
+
+public class Gorilla extends Animals {
+
+    private double runDistanceInKm;
+    private double runSpeedInKmPerHour;
+
+
+    public Gorilla(String name, String animalType, DietType dietType, int age, double runDistanceInKm, double runSpeedInKmPerHour) {
+        super(name, animalType, dietType, age);
+        this.runDistanceInKm = runDistanceInKm;
+        this.runSpeedInKmPerHour = runSpeedInKmPerHour;
+    }
+
+    @Override
+    public double calculateSpeed() {
+        return runDistanceInKm / runSpeedInKmPerHour + getAge();
+    }
+}
