@@ -1,35 +1,52 @@
 package org.example;
-
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        Zoo listOfZooAnimals = new Zoo();
-        
-        /*Gorilla gorilla = new Gorilla("Kenneth", "Gorilla", Animals.DietType.HERBIVORE, 40, 200, 5);
+        Zoo zooAnimal = new Zoo();
+
         Gorilla gorilla1 = new Gorilla("Robin", "Gorilla", Animals.DietType.HERBIVORE, 30, 200, 3);
-
-        GrizzlyBear grizzlyBear = new GrizzlyBear("Pablo", "Grizzly Bear", Animals.DietType.OMNIVORE, 15, 200, 48);
-        GrizzlyBear grizzlyBear1 = new GrizzlyBear("Escobear", "Grizzly Bear", Animals.DietType.OMNIVORE, 8, 200, 45);
-        GrizzlyBear grizzlyBear2 = new GrizzlyBear("Pluto", "Grizzly Bear", Animals.DietType.OMNIVORE, 4, 200, 60);
-
-        PolarBear polarBear = new PolarBear("Coca", "Polar Bear", Animals.DietType.CARNIVORE, 8, 200, 45);
-        PolarBear polarBear1 = new PolarBear("Cola", "Polar Bear", Animals.DietType.CARNIVORE, 22, 200, 28);
-
-        WhaleShark whaleShark = new WhaleShark("BigFish", "Whale Shark", Animals.DietType.OMNIVORE, 40, 200, 6.44);
-         */
+        GrizzlyBear grizzlyBear = new GrizzlyBear("Pablo", "Grizzly Bear", Animals.DietType.OMNIVORE, 7, 200, 3);
+        GrizzlyBear grizzlyBear1 = new GrizzlyBear("Robin", "Grizzly Bear", Animals.DietType.OMNIVORE, 30, 200, 6);
+        PolarBear polarBear = new PolarBear("Coca", "Polar Bear", Animals.DietType.CARNIVORE, 23, 200, 20);
+        PolarBear polarBear1 = new PolarBear("Cola", "Polar Bear", Animals.DietType.CARNIVORE, 14, 200, 20);
+        WhaleShark whaleShark = new WhaleShark("BigFish", "Whale Shark", Animals.DietType.OMNIVORE, 9, 200, 4);
 
 
-        listOfZooAnimals.addAnimalToList("Kenneth", "Gorilla", Animals.DietType.HERBIVORE, 42, 200, 42);
-        listOfZooAnimals.addAnimalToList("Robin", "Grizzly Bear", Animals.DietType.OMNIVORE, 30, 200, 10);
-        listOfZooAnimals.addAnimalToList("Coca", "Polar Bear", Animals.DietType.CARNIVORE, 20, 200, 42);
-        listOfZooAnimals.addAnimalToList("Cola","Polar Bear", Animals.DietType.CARNIVORE, 10, 200, 20);
-        listOfZooAnimals.addAnimalToList("Cola","Polar Bear", Animals.DietType.CARNIVORE, 10, 200, 20);
 
-        System.out.println(listOfZooAnimals.printNumberOfAnimalsInList());
-        listOfZooAnimals.printAnimalList();
+        zooAnimal.addAnimalToList(gorilla1);
+        zooAnimal.addAnimalToList(grizzlyBear);
+        zooAnimal.addAnimalToList(grizzlyBear1);
+        zooAnimal.addAnimalToList(polarBear);
+        zooAnimal.addAnimalToList(polarBear1);
+        zooAnimal.addAnimalToList(whaleShark);
+
+
+
+        //Kan også bruke Switch statements
+        for (Animals animal : zooAnimal.getAnimals()) {
+            if (animal instanceof  Gorilla) {
+                Gorilla gorillaInList = (Gorilla) animal;
+                System.out.println(gorillaInList);
+            }
+            if (animal instanceof GrizzlyBear) {
+                GrizzlyBear grizzlyBearInList = (GrizzlyBear) animal;
+                System.out.println(grizzlyBearInList);
+            }
+            if (animal instanceof PolarBear) {
+                PolarBear polarBearInList = (PolarBear) animal;
+                System.out.println(polarBearInList);
+            }
+            if (animal instanceof WhaleShark) {
+                WhaleShark whaleSharkInList = (WhaleShark) animal;
+                System.out.println(whaleSharkInList);
+            }
+        }
+
+
+        System.out.println("Det er " + zooAnimal.printNumberOfAnimalsInList() + " Antall dyr i denne listen");
 
 
     /*System.out.println(listOfAnimals.gorilla);
