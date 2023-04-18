@@ -3,16 +3,18 @@ import java.util.ArrayList;
 import java.util.List;
 public class Zoo {
 
-    private List<Animals> animalsInZooList;
+    private List<Animals> animalsInZooList = new ArrayList<>();
 
     public Zoo() {
         animalsInZooList = new ArrayList<>();
     }
 
-    public void addAnimalToList(String name, String animalType, Animals.DietType dietType, int age,
-                                double runDistanceInKm, double runSpeedInKmPerHour) {
-        Animals zooAnimals = new Animals();
-        animalsInZooList.add(zooAnimals);
+    public void addAnimalToList(Animals newZooAnimal) {
+        animalsInZooList.add(newZooAnimal);
+    }
+
+    public List<Animals> getAnimals() {
+        return animalsInZooList;
     }
 
     public int printNumberOfAnimalsInList() {
@@ -25,5 +27,3 @@ public class Zoo {
         }
     }
 }
-
-
