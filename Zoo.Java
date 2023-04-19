@@ -21,9 +21,10 @@ public class Zoo {
         return animalsInZooList.size();
     }
 
-    public void printAnimalList() {
+    public List<Animals> printAnimalList() {
         for (Animals zooAnimals : animalsInZooList) {
             System.out.println(zooAnimals);
         }
+        return animalsInZooList;
     }
 }
