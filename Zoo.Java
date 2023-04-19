@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class Zoo {
 
-    private List<Animals> animalsInZooList = new ArrayList<>();
+    private List<Animals> animalsInZooList;
 
     public Zoo() {
         animalsInZooList = new ArrayList<>();
