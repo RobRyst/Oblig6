@@ -47,6 +47,7 @@ public class Main {
 
 
         System.out.println("Det er " + zooAnimal.printNumberOfAnimalsInList() + " Antall dyr i denne listen");
+        //System.out.println(zooAnimal.printAnimalList());
 
 
     /*System.out.println(listOfAnimals.gorilla);
